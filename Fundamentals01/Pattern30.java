@@ -2,25 +2,22 @@ package Fundamentals01;
 
 import java.util.Scanner;
 
-public class Pattern3 {
+public class Pattern30 {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int n = s.nextInt();
-
 		int row = 1;
-		int nst = n;
-		while (row <= n) {
 
-			// work
-			int cst=1;
-			while(cst<=nst) {
-				System.out.print("* ");
-				cst++;
+		while (row <= n) {
+			int val = n;
+			int nst = n;
+			for (int cst = 1; cst <= nst; cst++) {
+				System.out.print((val--) + "\t");
 			}
-			// prepare
+
+			// preparation
 			System.out.println();
-			nst--;
 			row++;
 
 		}

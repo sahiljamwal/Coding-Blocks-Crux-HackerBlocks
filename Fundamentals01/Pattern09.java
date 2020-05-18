@@ -2,33 +2,31 @@ package Fundamentals01;
 
 import java.util.Scanner;
 
-public class Pattern6 {
+public class Pattern09 {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int n = s.nextInt();
+		int nst = 1;
+		int nsp = n - 1;
 
-		int nst = n;
-		int nsp = 0;
 		int row = 1;
 		while (row <= n) {
-
-			// space work
+			// space
 			for (int csp = 1; csp <= nsp; csp++) {
 				System.out.print(" ");
 			}
 
-			// star work
-			for (int csp = 1; csp <= nst; csp++) {
+			// star
+			for (int cst = 1; cst <= nst; cst++) {
 				System.out.print("*");
 			}
 
-			// presentation
+			// prepare
 			System.out.println();
+			nst += 2;
+			nsp--;
 			row++;
-			nsp += 2;
-			nst--;
-
 		}
 
 		s.close();
