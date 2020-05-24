@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.Scanner;
 
-public class ArrayOperations {
+public class Array_Operations {
 
 	static Scanner s = new Scanner(System.in);
 
