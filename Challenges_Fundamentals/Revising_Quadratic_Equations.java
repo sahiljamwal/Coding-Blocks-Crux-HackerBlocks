@@ -9,22 +9,19 @@ public class Revising_Quadratic_Equations {
 		int b = s.nextInt();
 		int c = s.nextInt();
 
-		int D = (int) Math.sqrt(((b * b) - (4 * a * c)));
+		double D = Math.sqrt(((b * b) - (4 * a * c)));
 
 		if (D == 0) {
-			int r1 = ((-b) / (2 * a));
+			double r1 = ((-b) / (2.0 * a));
 			System.out.println("Real and Equal");
-			System.out.println(r1 + " " + r1);
+			System.out.print((int) (r1) + " " + (int) (r1));
 		} else if (D > 0) {
-			int r1 = (((-b) - D) / (2 * a));
-			int r2 = (((-b) + D) / (2 * a));
+			double r1 = (((-b) - D) / (2.0 * a));
+			double r2 = (((-b) + D) / (2.0 * a));
 			System.out.println("Real and Distinct");
-			if (r1 < r2)
-				System.out.println(r1 + " " + r2);
-			else
-				System.out.println(r2 + " " + r1);
+			System.out.print((int) (Math.min(r1, r2)) + " " + (int) (Math.max(r1, r2)));
 		} else {
-			System.out.println("Imaginary");
+			System.out.print("Imaginary");
 		}
 		s.close();
 

@@ -16,8 +16,6 @@ public class Hcf_Gcd {
 		}
 		System.out.println("Hcf is "+divisor);
 		
-		
-		
 		s.close();
 	}
 
