@@ -16,9 +16,33 @@ public class Rotate_Image_NxN {
 		}
 
 		rotateArray(arr);
+		rotateArray(arr, n);
 		display(arr);
 
 		s.close();
+	}
+
+	private static void rotateArray(int[][] arr, int n) {
+		transposeArray(arr, n);
+		for (int j = 0; j < arr[0].length; j++) {
+			for (int i = 0; i < arr.length / 2; i++) {
+
+				int temp = arr[i][j];
+				arr[i][j] = arr[arr.length - i - 1][j];
+				arr[arr.length - i - 1][j] = temp;
+			}
+		}
+	}
+
+	private static void transposeArray(int[][] arr, int n) {
+
+		for (int i = 0; i < n; i++) {
+			for (int j = i; j < n; j++) {
+				int temp = arr[j][i];
+				arr[j][i] = arr[i][j];
+				arr[i][j] = temp;
+			}
+		}
 	}
 
 	private static void display(int[][] arr) {
@@ -27,7 +51,7 @@ public class Rotate_Image_NxN {
 				if (col == arr[row].length - 1)
 					System.out.print(arr[row][col]);
 				else
-					System.out.print(arr[row][col]+" ");
+					System.out.print(arr[row][col] + "\t");
 			}
 			System.out.println();
 		}

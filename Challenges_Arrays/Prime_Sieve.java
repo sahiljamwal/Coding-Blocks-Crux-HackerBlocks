@@ -2,7 +2,7 @@ package Challenges_Arrays;
 
 import java.util.Scanner;
 
-public class Prime_Visits {
+public class Prime_Sieve {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
@@ -18,31 +18,40 @@ public class Prime_Visits {
 	}
 
 	private static int primeVisits(int a, int b) {
+
 		int count = 0;
+
+		int prime[] = new int[b + 1];
+
+		for (int i = 0; i < prime.length; i++) {
+			prime[i] = 1;
+		}
+
+		prime[0] = 0;
+		prime[1] = 0;
+
+		for (int i = 4; i <= b; i += 2) {
+			prime[i] = 0;
+		}
+
+		for (int i = 3; i <= b; i += 2) {
+			if (prime[i] == 1) {
+				for (int j = Math.abs(i * i); j <= b; j += 2 * i) {
+					prime[j] = 0;
+				}
+			}
+		}
+
 		for (int i = a; i <= b; i++) {
-			if (checkPrime(i)) {
+			if(prime[i] == 1) {
 				count++;
+				System.out.print(i+" ");
 			}
-
 		}
+		System.out.println();
+
 		return count;
-	}
 
-	private static boolean checkPrime(int n) {
-
-		if (n == 1)
-			return false;
-		if (n == 2)
-			return true;
-		if (n % 2 == 0)
-			return false;
-
-		for (int i = 3; i * i <= n; i += 2) {
-			if (n % i == 0) {
-				return false;
-			}
-		}
-		return true;
 	}
 
 }
