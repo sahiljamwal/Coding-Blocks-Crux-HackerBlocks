@@ -2,6 +2,7 @@ package Fundamentals01;
 
 import java.util.Scanner;
 
+//to check if number is odd/even?
 public class EvenOdd {
 
 	public static void main(String[] args) {
