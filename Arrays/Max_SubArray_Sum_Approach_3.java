@@ -1,12 +1,21 @@
 package Arrays;
 
+import java.util.Scanner;
+
 //by using kedane's algorithm in O(n)
 
 public class Max_SubArray_Sum_Approach_3 {
 
 	public static void main(String[] args) {
-		int[] arr = { 1, 2, 3, -3, -6, 5, -2 };
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int[] arr = new int[n];
+		for (int i = 0; i < n; i++) {
+			arr[i] = s.nextInt();
+		}
 		generateMaxSum(arr);
+
+		s.close();
 	}
 
 	private static void generateMaxSum(int[] arr) {

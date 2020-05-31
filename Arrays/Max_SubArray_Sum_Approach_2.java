@@ -1,12 +1,21 @@
 package Arrays;
 
-//this is an O(n^2) approach and use a pre-computation array storing cummulative sum
+import java.util.Scanner;
+
+//this is an O(n^2) approach and use a pre-computation array storing cumulative sum
 
 public class Max_SubArray_Sum_Approach_2 {
 
 	public static void main(String[] args) {
-		int[] arr = { 1, 2, 3, -3, -6, 5, -2 };
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int[] arr = new int[n];
+		for (int i = 0; i < n; i++) {
+			arr[i] = s.nextInt();
+		}
 		generateMaxSum(arr);
+
+		s.close();
 	}
 
 	private static void generateMaxSum(int[] arr) {

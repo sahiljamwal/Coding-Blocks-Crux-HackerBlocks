@@ -16,16 +16,16 @@ public class Pattern_Hour_Glass {
 
 			// space work
 			for (int csp = 1; csp <= nsp; csp++) {
-				System.out.print("  ");
+				System.out.print("\t");
 			}
 
 			// start work
 			for (int cst = 1; cst <= nst; cst++) {
 				
 				 if (cst <= nst / 2) {
-					System.out.print((value--) + " ");
+					System.out.print((value--) + "\t");
 				} else {
-					System.out.print((value++) + " ");
+					System.out.print((value++) + "\t");
 				}
 				
 			}

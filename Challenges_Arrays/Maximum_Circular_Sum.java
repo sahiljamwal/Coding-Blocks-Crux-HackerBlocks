@@ -2,6 +2,7 @@ package Challenges_Arrays;
 
 import java.util.Scanner;
 
+//complexity O(n^2)
 public class Maximum_Circular_Sum {
 
 	public static void main(String[] args) {
@@ -12,6 +13,7 @@ public class Maximum_Circular_Sum {
 			int[] arr = new int[n];
 			for (int i = 0; i < arr.length; i++)
 				arr[i] = s.nextInt();
+
 			calculateMaxCircularSum(arr);
 
 		}
@@ -23,9 +25,9 @@ public class Maximum_Circular_Sum {
 		int n = arr.length;
 		long cs = 0;// current sum
 		long ms = 0;// max sum
-		int index = -1, counter = 0; //to store the index of element evaluated
+		int index = -1, counter = 0; // to store the index of element evaluated
 		int i = 0;
-		while (i < n ) {
+		while (i < n) {
 			if (counter == 0)
 				index = i;
 			cs += arr[i];
@@ -34,7 +36,7 @@ public class Maximum_Circular_Sum {
 			ms = Math.max(cs, ms);
 			i++;
 			if (i == n)
-				i = 0;//for circular array
+				i = 0;// for circular array
 			counter++;
 			if (counter == n) {
 				counter = 0;
