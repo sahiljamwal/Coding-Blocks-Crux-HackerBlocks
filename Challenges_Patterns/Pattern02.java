@@ -9,14 +9,31 @@ public class Pattern02 {
 		int n = s.nextInt();
 		int nst = 1;
 		int rows = 1;
-		int index=0;
-		int[] fibonacci = new int[(n * (n + 1)) / 2];
-		generateFibonacci(fibonacci);
+		int a = 0, b = 1;
+		int c;
 		while (rows <= n) {
 			nst = rows;
 			// star work
 			for (int cst = 1; cst <= nst; cst++) {
-				System.out.print(fibonacci[index++]+"\t");
+				if (rows == 1) {
+					System.out.print(a + "\t");
+				} else if (rows == 2) {
+					if (cst == 1)
+						System.out.print(b + "\t");
+					if (cst == 2) {
+						c = a + b;
+						a = b;
+						b = c;
+						System.out.print(c + "\t");
+					}
+				} else {
+					c = a + b;
+					a = b;
+					b = c;
+
+					System.out.print(c + "\t");
+				}
+
 			}
 
 			// prepare
@@ -28,20 +45,5 @@ public class Pattern02 {
 		s.close();
 	}
 
-	private static void generateFibonacci(int[] fibonacci) {
-		int a = 0;
-		int b = 1;
-		int index=0;
-		fibonacci[index++]=a;
-		fibonacci[index++]=b;
-		int n = fibonacci.length;
-		int c;
-		for (int i = 3; i <= n; i++) {
-			c=a+b;
-			fibonacci[index++]=c;
-			a=b;
-			b=c;
-		}
-	}
 
 }
