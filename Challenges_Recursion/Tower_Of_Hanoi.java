@@ -2,7 +2,7 @@ package Challenges_Recursion;
 
 import java.util.Scanner;
 
-//solving the tower of hanoi problem using recursion
+//solving the tower of Hanoi problem using recursion
 public class Tower_Of_Hanoi {
 
 	public static void main(String[] args) {
