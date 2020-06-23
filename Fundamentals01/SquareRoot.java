@@ -2,7 +2,7 @@ package Fundamentals01;
 
 import java.util.Scanner;
 
-//to print sqrt of number without using libraray function
+//to print sqrt of number without using library function
 
 public class SquareRoot {
 
