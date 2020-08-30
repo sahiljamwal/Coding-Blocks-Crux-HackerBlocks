@@ -1,7 +1,7 @@
 package Stack;
 
 //Stack implementation using Linked Lists
-public class StackMain<T> {
+public class Stack<T> {
 	private class Node<K> {
 		K data;
 		Node<K> next;
