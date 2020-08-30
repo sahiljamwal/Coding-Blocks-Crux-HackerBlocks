@@ -1,7 +1,7 @@
 package Stack;
 
 //Stack implementation using Linked Lists
-public class Stack<T> {
+public class StackMain<T> {
 	private class Node<K> {
 		K data;
 		Node<K> next;
@@ -17,7 +17,7 @@ public class Stack<T> {
 	private Node<T> head;
 
 	// Stack Constructor
-	public Stack() {
+	public StackMain() {
 		this.size = 0;
 		this.head = null;
 	}
