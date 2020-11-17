@@ -26,7 +26,7 @@ public class BalancedParenthesis {
 		}
 
 		ArrayDeque<Character> stack = new ArrayDeque<Character>();
-		
+
 		for (int i = 0; i < n; i++) {
 			char ch = str.charAt(i);
 			if ((ch == '{') || (ch == '[') || (ch == '(')) {

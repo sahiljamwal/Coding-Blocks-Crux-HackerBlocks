@@ -3,7 +3,7 @@ package Stack;
 public class StackRunner {
 
 	public static void main(String[] args) {
-		Stack<Character> stack =new Stack<Character>();
+		StackMain<Character> stack =new StackMain<Character>();
 		stack.push('a');
 		stack.push('b');
 		//stack.print();
