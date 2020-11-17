@@ -9,9 +9,7 @@ public class FindingSetBits {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int n = s.nextInt();
-
 		getSetBits(n);
-
 		s.close();
 	}
 
@@ -25,8 +23,6 @@ public class FindingSetBits {
 			count += (n & 1);
 			n = n >> 1;
 		}
-
 		System.out.println(count);
 	}
-
 }
